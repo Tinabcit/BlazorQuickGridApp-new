@@ -1,0 +1,6 @@
+C:\Users\tinas\OneDrive\Desktop\COMP 4602- Advanced .NET Web App Developnment\Week 7\Lab\BlazorQuickGridApp\Client\obj\Debug\net7.0\BlazorQuickGridApp.Client.csproj.AssemblyReference.cache
+C:\Users\tinas\OneDrive\Desktop\COMP 4602- Advanced .NET Web App Developnment\Week 7\Lab\BlazorQuickGridApp\Client\obj\Debug\net7.0\BlazorQuickGridApp.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tinas\OneDrive\Desktop\COMP 4602- Advanced .NET Web App Developnment\Week 7\Lab\BlazorQuickGridApp\Client\obj\Debug\net7.0\BlazorQuickGridApp.Client.AssemblyInfoInputs.cache
+C:\Users\tinas\OneDrive\Desktop\COMP 4602- Advanced .NET Web App Developnment\Week 7\Lab\BlazorQuickGridApp\Client\obj\Debug\net7.0\BlazorQuickGridApp.Client.AssemblyInfo.cs
+C:\Users\tinas\OneDrive\Desktop\COMP 4602- Advanced .NET Web App Developnment\Week 7\Lab\BlazorQuickGridApp\Client\obj\Debug\net7.0\BlazorQuickGridApp.Client.csproj.CoreCompileInputs.cache
+C:\Users\tinas\OneDrive\Desktop\COMP 4602- Advanced .NET Web App Developnment\Week 7\Lab\BlazorQuickGridApp\Client\obj\Debug\net7.0\BlazorQuickGridApp.Client.MvcApplicationPartsAssemblyInfo.cache

@@ -1,0 +1,28 @@
+﻿@page "/fetchdata"
+@using BlazorQuickGridApp.Shared
+@inject HttpClient Http
+
+<h3>Weather Forecast (QuickGrid)</h3>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <QuickGrid Items="forecasts">
+        <PropertyColumn Property="@(f => f.Date)" />
+        <PropertyColumn Property="@(f => f.TemperatureC)" />
+        <PropertyColumn Property="@(f => f.TemperatureF)" />
+        <PropertyColumn Property="@(f => f.Summary)" />
+    </QuickGrid>
+}
+
+@code {
+    private WeatherForecast[]? forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+    }
+}
