@@ -1,5 +1,6 @@
 ﻿@page "/fetchdata"
 @using BlazorQuickGridApp.Shared
+@using Microsoft.AspNetCore.Components.QuickGrid
 @inject HttpClient Http
 
 <h3>Weather Forecast (QuickGrid)</h3>
@@ -10,19 +11,20 @@
 }
 else
 {
-    <QuickGrid Items="forecasts">
-        <PropertyColumn Property="@(f => f.Date)" />
-        <PropertyColumn Property="@(f => f.TemperatureC)" />
-        <PropertyColumn Property="@(f => f.TemperatureF)" />
-        <PropertyColumn Property="@(f => f.Summary)" />
+    <QuickGrid TItem="WeatherForecast" Items="forecasts">
+        <PropertyColumn Property="@(forecast => forecast.Date)" Title="Date" />
+        <PropertyColumn Property="@(forecast => forecast.TemperatureC)" Title="Temp (C)" />
+        <PropertyColumn Property="@(forecast => forecast.TemperatureF)" Title="Temp (F)" />
+        <PropertyColumn Property="@(forecast => forecast.Summary)" Title="Summary" />
     </QuickGrid>
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private IQueryable<WeatherForecast>? forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        var result = await Http.GetFromJsonAsync<List<WeatherForecast>>("WeatherForecast");
+        forecasts = result?.AsQueryable();
     }
 }
